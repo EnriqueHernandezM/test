@@ -1,5 +1,5 @@
 function mostrarContador() {
-  fetch("http://localhost:8081/api/v1", {
+  fetch("https://testcookies.fly.dev/api/v1", {
     method: "POST",
     credentials: "include",
     headers: {
@@ -25,7 +25,7 @@ function mostrarContador() {
     });
 }
 function verUser() {
-  fetch("http://localhost:8081/", {
+  fetch("https://testcookies.fly.dev", {
     method: "GET",
     credentials: "include",
   })
