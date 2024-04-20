@@ -1,5 +1,11 @@
 function mostrarContador() {
-  fetch("https://testcookies.fly.dev/")
+  fetch("https://testcookies.fly.dev/", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
     .then((res) => res.json())
     .then((json) => {
       inventarioVinateria = json;
