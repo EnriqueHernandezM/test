@@ -4,6 +4,9 @@ function mostrarContador() {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
+      //'Accept': 'application/json',
+      //'Content-Type': 'application/json',
+      "Access-Control-Request-Private-Network": "true",
     },
     body: JSON.stringify({ tokenRes: 22222 }),
   })
@@ -28,6 +31,9 @@ function verUser() {
   fetch("http://localhost:8081", {
     method: "GET",
     credentials: "include",
+    headers: {
+      "Access-Control-Request-Private-Network": "true",
+    },
   })
     .then((res) => res.json())
     .then((json) => {
