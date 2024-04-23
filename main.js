@@ -1,14 +1,11 @@
 function mostrarContador() {
-  fetch("http://localhost:8081/api/v1", {
+  fetch("https://testcookies.fly.dev/api/v1", {
     method: "POST",
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
-      //'Accept': 'application/json',
-      //'Content-Type': 'application/json',
-      "Access-Control-Request-Private-Network": "true",
     },
-    body: JSON.stringify({ tokenRes: 22222 }),
+    body: JSON.stringify({ name: "Enrique", password: 123 }),
   })
     .then((res) => res.json())
     .then((json) => {
@@ -28,23 +25,24 @@ function mostrarContador() {
     });
 }
 function verUser() {
-  fetch("http://localhost:8081", {
-    method: "GET",
+  fetch("https://testcookies.fly.dev/see", {
+    //method: "GET",
     credentials: "include",
     headers: {
-      "Access-Control-Request-Private-Network": "true",
+      "Content-Type": "application/json",
     },
   })
     .then((res) => res.json())
     .then((json) => {
       let represent;
-      inventarioVinateria = json.cookie;
-      if (inventarioVinateria.user) {
+      console.log(json);
+      inventarioVinateria = json.user;
+      if (inventarioVinateria) {
         represent = inventarioVinateria.user;
       } else {
         represent = "nadie";
       }
-      console.log(inventarioVinateria);
+
       let html = "";
       html += `
 
@@ -54,6 +52,6 @@ function verUser() {
       document.getElementById("counter").innerHTML = html;
     })
     .catch((e) => {
-      console.log(e + "error");
+      console.log(e);
     });
 }
