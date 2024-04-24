@@ -4,7 +4,6 @@ function mostrarContador() {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
-      "X-RapidAPI-Host": "https://testcookies.fly.dev",
     },
     body: JSON.stringify({ name: "Enrique", password: 123 }),
   })
@@ -31,7 +30,6 @@ function verUser() {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
-      "X-RapidAPI-Host": "https://testcookies.fly.dev",
     },
   })
     .then((res) => res.json())
