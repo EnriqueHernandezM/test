@@ -28,7 +28,7 @@ function mostrarContador() {
 function verUser() {
   fetch("https://testcookies.fly.dev/see", {
     method: "GET",
-    credentials: "include",
+    //credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },
