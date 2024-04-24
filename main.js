@@ -2,7 +2,7 @@ function mostrarContador() {
   fetch("https://testcookies.fly.dev/api/v1", {
     method: "POST",
     credentials: "include",
-    mode: "cors",
+
     headers: {
       "Content-Type": "application/json",
     },
@@ -28,7 +28,7 @@ function mostrarContador() {
 function verUser() {
   fetch("https://testcookies.fly.dev/see", {
     method: "GET",
-    //credentials: "include",
+    credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },
